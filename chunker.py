@@ -15,6 +15,7 @@ def main():
 
         #print(f"Total chunks: {len(all_chunks)}, {split[0].metadata}") #tells us how many chunks have been created and the name of the program
     print(f"Total chunks: {len(all_chunks)}")
+    return all_chunks
     
 # opens and cleans the document 
 def load_and_clean(filepath):
@@ -53,4 +54,5 @@ def split_chunk(markdown, program_name):  #splits the document first by headers,
 
     return char_split
 
-main()
+if __name__ == "__main__":
+    main()

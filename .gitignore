@@ -5,3 +5,4 @@ __pycache__/
 .env
 output/
 handbooks.json
+qdrant_storage/
