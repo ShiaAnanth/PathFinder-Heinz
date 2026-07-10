@@ -1,0 +1,133 @@
+from ragas import Dataset
+
+eval_grading = Dataset(name="pfheinz_eval", backend="local/csv", root_dir=".")  #creates a csv called pfheinz_eval within a datasets folder containing all the grading answers
+
+eval_data = [
+    {
+        "question": "What is the difference between the msppm and the msppm-da programs?",
+        "expected_answer": (
+            "MSPPM-DA is a distinct Data Analytics track with its own core curriculum "
+            "focused heavily on data/analytics skills (e.g., Database Management for "
+            "Policy Analytics, Machine Learning Foundations with Python, Applied "
+            "Econometrics I & II). MSPPM (the base program) has three separate tracks "
+            "— MSPPM 2 (two-year), MSPPM 3 (three-semester), and MSPPM-DC (Washington "
+            "D.C. track) — with a more general policy/management core using a 'bin' "
+            "system (Policy Domains, Policy Methods, Management). MSPPM-DC (the D.C. "
+            "track) should not be confused with MSPPM-DA (the Data Analytics track) "
+            "— they are two different tracks entirely."
+        ),
+    },
+    {
+        "question": "Does AIM have an internship requirement?",
+        "expected_answer": (
+            "AIM has no internship requirement of any kind. The program instead "
+            "requires an AI Capstone Project (95-720, 18 units) as its team-based, "
+            "real-world-client culminating project. Unlike MISM or MSPPM, the AIM "
+            "handbook contains no internship section — the program is structured "
+            "around required coursework (144 units total across three semesters) "
+            "and the Capstone Project, not a work placement."
+        ),
+    },
+    {
+        "question": "What extra core classes do I need for MISM BIDA compared to MISM?",
+        "expected_answer": (
+            "MISM-BIDA's core adds four courses not required in standard MISM: "
+            "94-834 (Applied Econometrics I), 95-828 (Machine Learning for Problem "
+            "Solving), 95-865 (Unstructured Data Analytics), and 95-866 (Advanced "
+            "Business Analytics). In exchange, BIDA drops 95-723 (Managing Disruptive "
+            "Technologies) and the MISM elective choice among 95-706/95-874/94-866. "
+            "Both programs total 162 units, but BIDA's core is larger (132 vs. 114 "
+            "units), leaving fewer free electives (30 vs. 48 units)."
+        ),
+    },
+    {
+        "question": "I am interested in managing and designing video games, which program should I choose?",
+        "expected_answer": (
+            "The Master of Entertainment Industry Management (MEIM) program is the best "
+            "fit. MEIM's mission explicitly includes preparing leaders for Video Game "
+            "Production, Research, Management, and Marketing, alongside Film, TV, Music, "
+            "and Streaming. MEIM offers dedicated gaming electives, including 'What Makes "
+            "Us Play? The Craft of the Video Game' (game design principles, shipping "
+            "products, platform compatibility) and 'The Business of Gaming' (publishing "
+            "models, IP licensing, developer relationships). MEIM is a two-year program "
+            "(Pittsburgh year one, Los Angeles year two) requiring 192 units and a "
+            "mandatory internship/practicum each year, including opportunities at gaming "
+            "companies like PlayStation, Riot Games, and Scopely (past Capstone sponsors)."
+        ),
+    },
+    {
+        "question": "How is MSIT different from MISM?",
+        "expected_answer": (
+            "MSIT is a part-time program (online or hybrid evening classes) designed for "
+            "working technology professionals, typically completed in 2-3 years (up to "
+            "5, extendable to 7). Critically, MSIT is NOT eligible for F-1 or J-1 student "
+            "visa status. MISM is a full-time, in-person program completed in 3 semesters "
+            "(162 units). MSIT offers three majors (IT Management, Information Security "
+            "and Assurance, Business Intelligence and Data Analytics) at 144 total units, "
+            "versus MISM's more general IS/management curriculum."
+        ),
+    },
+    {
+        "question": "Can I take a gap year?",
+        "expected_answer": (
+            "A complete answer is not available in this corpus: the Heinz College "
+            "Master's Student Handbook explicitly defers Leave of Absence policy to "
+            "the University-Wide Graduate Student Handbook (Office of Graduate & "
+            "Postdoctoral Affairs), which is not included in the ingested source "
+            "documents. Individual program handbooks (e.g., MEIM, MAM) mention their "
+            "own leave-of-absence procedures (requesting in advance, approval by "
+            "Program Director/Associate Dean), but do not represent the authoritative "
+            "university-wide policy. An ideal answer would state what program-level "
+            "information IS available while noting that the comprehensive, official "
+            "leave of absence policy is not covered by this handbook set."
+        ),
+    },
+    {
+        "question": "How do I take classes outside of Heinz college?",
+        "expected_answer": (
+            "Students must obtain Program Director approval (for the course to count "
+            "toward the degree) AND Academic Advisor approval via a General Petition "
+            "form (submitted by the add/drop deadline). Approved courses with a "
+            "passing grade (C- or better) count toward Heinz College elective credit "
+            "and factor into the Heinz QPA. Students are encouraged to select up to "
+            "36 units of general elective coursework outside Heinz College; some "
+            "additional non-Heinz coursework may be permitted beyond that 36-unit "
+            "cap on a case-by-case basis with Advisor approval. Students on Academic "
+            "Probation require prior approval from Heinz College specifically before "
+            "enrolling in non-Heinz courses. Exact program-specific limits should "
+            "still be verified in the relevant program handbook."
+        ),
+    },
+    {
+        "question": "I want to break into the health care industry, what should I pursue?",
+        "expected_answer": (
+            "The Master of Science in Health Care Analytics and Information Technology "
+            "(MSHCA) is the primary, most directly relevant program — it should be named "
+            "explicitly as the top recommendation, not just referenced via its "
+            "specializations. MSHCA offers three optional specializations: Health Care "
+            "Policy (policy creation/evaluation), Health Care Administration (operational "
+            "leadership in health systems/insurance), and Health Care Products and "
+            "Entrepreneurship (product development, entrepreneurial process, marketing). "
+            "A correct answer should mention MSHCA as the whole-degree recommendation "
+            "and ideally reference at least two of its three specializations. MSPPM's "
+            "Health Policy concentration is a secondary, valid alternative for students "
+            "more interested in the public-policy side of healthcare specifically."
+        ),
+    },
+    {
+        "question": "What is the weather like in pittsburgh?",
+        "expected_answer": (
+            "The system should refuse to answer, since weather information is entirely "
+            "outside the scope of Heinz College program handbooks. A correct response "
+            "clearly states it doesn't know or that this isn't something it can help "
+            "with, without attempting to fabricate an answer or awkwardly redirect to "
+            "unrelated handbook content. 'I don't know' is a correct, honest response "
+            "for this out-of-scope query."
+        ),
+    },
+]
+
+for item in eval_data: #loops through every question and response and adds it to the csv
+    eval_grading.append(item)
+
+eval_grading.save() #saves the csv
