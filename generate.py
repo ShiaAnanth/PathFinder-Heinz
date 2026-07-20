@@ -60,7 +60,8 @@ if __name__ == "__main__":
         "Can I take a gap year?",
         "How do I take classes outside of Heinz college?",
         "I want to break into the health care industry, what should I pursue?",
-        "What is the weather like in pittsburgh?"
+        "What is the weather like in pittsburgh?",
+        "How long can I wait to add/drop classes at Heinz?"
     ]
 
     for q in test_questions:

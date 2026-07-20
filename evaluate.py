@@ -125,6 +125,14 @@ eval_data = [
             "for this out-of-scope query."
         ),
     },
+        {
+        "question": "How long can I wait to add/drop classes at Heinz?",
+        "expected_answer": (
+            "Heinz College's deadline for adding and dropping full-semester courses "
+            "is the tenth business day of the semester. "
+            "The deadline for mini courses is the fifth business day of the mini."
+        ),
+    }
 ]
 
 for item in eval_data: #loops through every question and response and adds it to the csv
