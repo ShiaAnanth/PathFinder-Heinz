@@ -20,7 +20,7 @@ qdrant = QdrantVectorStore.from_existing_collection(
     url="http://localhost:6333",
 )
 
-llm = ChatOpenAI(
+llm = ChatOpenAI( #ChatOpenAI is LangChain's wrapper around OpenAI's API, designed to plug into LangChain's ecosystem
     model="gpt-4o-mini", #possibly change this model in later stage if limitations arise
     openai_api_key=os.getenv("OPENAI_API_KEY")
 )
