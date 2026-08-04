@@ -30,10 +30,9 @@ Outlined below are the tasks that have been completed in the roadmap as of 7/10/
 - [x] Embedding and vector storage
 - [x] Retrieval + generation with source attribution
 - [x] Evaluation dataset (9 questions, source-verified)
-- [ ] RAGAS scoring script and results
-- [ ] Debugging based on evaluation findings
-- [ ] Conversational memory
+- [x] RAGAS scoring script and results
 - [ ] Deployment (Qdrant Cloud + Streamlit, custom interface)
+- [ ] Conversational memory
 
 ## Author
 Built by **Shia Ananth**, M.S. Business Intelligence and Data Analytics student at Heinz College, Carnegie Mellon University, as a summer project to learn and improve knowledge on RAG systems. 
