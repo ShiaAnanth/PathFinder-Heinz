@@ -18,7 +18,9 @@ embeddings = OpenAIEmbeddings(
 qdrant = QdrantVectorStore.from_existing_collection(
     embedding=embeddings,
     collection_name=COLLECTION_NAME,
-    url="http://localhost:6333",
+    #url="http://localhost:6333",
+    url=os.getenv("QDRANT_URL"),
+    api_key=os.getenv("QDRANT_API_KEY"),
 )
 
 llm = ChatOpenAI( #ChatOpenAI is LangChain's wrapper around OpenAI's API, designed to plug into LangChain's ecosystem
