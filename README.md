@@ -31,7 +31,7 @@ Years ago, when I was choosing my major in undergrad, course information and pro
 - `gpt-4o-mini` — a smaller, cheaper model; Dynamic program detection (detect_program()) + Qdrant metadata filtering, so retrieval can narrow to the correct handbook(s) when a question names a specific program
 
 ### Evaluation
-RAGAS — Faithfulness and Context Precision metrics, run against a 10-question, hand-verified test set with source-checked reference answers. 
+- `RAGAS — Faithfulness and Context Precision metrics, run against a 10-question, hand-verified test set with source-checked reference answers. 
 
 ## Project Pipeline
 ```mermaid
