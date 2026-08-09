@@ -71,12 +71,12 @@ graph TD
 - Corpus gaps — some real answers (e.g., university-wide Leave of Absence policy) aren't in the ingested handbooks, since the source documents defer to external documents not included in this project.
 
 ## Roadmap
-Outlined below are the tasks that have been completed in the roadmap as of 7/10/2026. As progress is made, the roadmap checklist will be updated accordingly.
+Outlined below are the tasks that have been completed in the roadmap as of 8/9/2026. As progress is made, the roadmap checklist will be updated accordingly.
 - [x] PDF extraction and cleaning
 - [x] Header-aware chunking with metadata
 - [x] Embedding and vector storage
 - [x] Retrieval + generation with source attribution
-- [x] Evaluation dataset (9 questions, source-verified)
+- [x] Evaluation dataset (10 questions, source-verified)
 - [x] RAGAS scoring script and results
 - [x] Deployment (Qdrant Cloud + functional Streamlit interface)
 - [ ] **Current focus**: continuing to deepen evaluation methodology (additional metrics, larger test sets) and improve retrieval/generation quality
