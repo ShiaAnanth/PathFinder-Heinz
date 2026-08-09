@@ -1,7 +1,7 @@
 # PathFinder-Heinz
 A retrieval-augmented generation (RAG) system that helps prospective students navigate Carnegie Mellon's Heinz College graduate programs. This program is built from official program handbooks, with source-attributed answers instead of generic chatbot responses.
 
-PathFinder@Heinz is a rebuilt, more advanced version of an earlier project, PathFinder@CISE, which I originally built to help prospective students explore programs in the College of Integrated Science and Engineering (CISE) at James Madison University (JMU). This version uses a different, more sophisticated stack (Qdrant, Docker, OpenAI embeddings) and adds a rigorous evaluation layer. 
+**PathFinder@Heinz** is a rebuilt, more advanced version of an earlier project, **PathFinder@CISE**, which I originally built to help prospective students explore programs in the College of Integrated Science and Engineering (CISE) at James Madison University (JMU). This version uses a different, more sophisticated stack (Qdrant, Docker, OpenAI embeddings) and adds a rigorous evaluation layer. 
 
 ## Purpose of this tool
 Years ago, when I was choosing my major in undergrad, course information and program descriptions were scattered and hard to navigate. This Inspired PathFinder@CISE, which has now evolved into PathFinder@Heinz. This program is meant to help prospective students who need help choosing between Heinz College's programs in an easier way rather than digging through dense, overlapping handbooks that don't make comparisons easy. PathFinder@Heinz retrieves the relevant sections across all the program handbooks and generates a direct, cited answer, rather than making a prospective student read multiple documents to find the information they seek.
